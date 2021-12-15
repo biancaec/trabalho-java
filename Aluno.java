@@ -2,9 +2,9 @@ public class Aluno extends Pessoa {
 
 	private float nota;
 
-	public Aluno() {
+	public Aluno(float nota) {
 		super();
-		this.nota = 0;
+		this.nota = nota;
 	}
 
 	public void setNota(float nota) {

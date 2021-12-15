@@ -7,6 +7,13 @@ public class InteracaoUsu {
 		return inum;
 	}
 
+	public static float receberFloat(String txt) {
+		System.out.println(txt);
+		String num = System.console().readLine();
+		float fnum = Float.parseFloat(num);
+		return fnum;
+	}	
+
 	public static String receberString(String txt) {
 		System.out.println(txt);
 		String rtxt = System.console().readLine();
