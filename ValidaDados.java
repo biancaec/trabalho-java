@@ -1,4 +1,5 @@
 import java.time.MonthDay;
+import java.util.regex.*;
 
 public class ValidaDados {
 	
@@ -9,5 +10,19 @@ public class ValidaDados {
 		} catch(Exception e) {
 			return false;
 		}
+	}
+
+	public static boolean validarTele(String tel) {
+		Pattern p = Pattern.compile("[0-9]+");
+		Matcher m = p.matcher(tel);
+		if (m.matches()) {
+			int len = m.group().length();
+			if(len > 11 || len < 9) {
+				return false;
+			}
+			return true;
+		}
+
+		return false;
 	}
 }

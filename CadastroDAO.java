@@ -6,10 +6,13 @@ public class CadastroDAO {
 	public static void cadastrar() {
 		String nome;
 		String aniv;
+		String tel;
 		String al = "nao";
 		nome = InteracaoUsu.receberString("Nome: ");
 		aniv = InteracaoUsu.receberData("Nascimento:");
+		tel = InteracaoUsu.receberTel();		
 		al = InteracaoUsu.receberString("Deseja cadastrar uma nota? [sim/nao]");
+
 		Pessoa pes;      		
 		
 		if (al.equalsIgnoreCase("sim")) {

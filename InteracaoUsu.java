@@ -42,4 +42,28 @@ public class InteracaoUsu {
 		
 		return dd+"/"+mm+"/"+aa;
 	}
+
+	public static String receberTel() {
+		boolean ok;
+		String tel;
+		do {
+			tel = receberString("Telefone (apenas numeros):");
+			ok = ValidaDados.validarTele(tel);
+			if (ok==false) {
+				mostrarTexto("Telefone invalido.");
+			}
+		}while(ok==false);
+
+		if (tel.length() == 9) {
+			return tel.substring(0,1)
+					+" "+tel.substring(1,5)
+					+" "+tel.substring(5);
+		}else {
+			return tel.substring(0,2)
+					+" "+tel.substring(2,3)
+					+" "+tel.substring(3,7)
+					+" "+tel.substring(7);
+		}
+
+	}
 }
