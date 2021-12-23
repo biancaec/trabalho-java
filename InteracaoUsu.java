@@ -43,11 +43,11 @@ public class InteracaoUsu {
 		return dd+"/"+mm+"/"+aa;
 	}
 
-	public static String receberTel() {
+	public static String receberTel(String txt) {
 		boolean ok;
 		String tel;
 		do {
-			tel = receberString("Telefone (apenas numeros):");
+			tel = receberString(txt);
 			ok = ValidaDados.validarTele(tel);
 			if (ok==false) {
 				mostrarTexto("Telefone invalido.");
