@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class CadastroDAO {
 	private static ArrayList<Pessoa> cads = new ArrayList<Pessoa>();
+	private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 	public static void cadastrar() {
 		String nome;
@@ -26,7 +28,7 @@ public class CadastroDAO {
 		pes.setNome(nome);
 		pes.setNasc(aniv);
 		pes.setTel(tel);
-		pes.setCad(LocalDate.now().toString());
+		pes.setCad(LocalDate.now().format(formatter));
 		pes.setAlt(LocalDate.now().toString());
 		cads.add(pes);
 	}
