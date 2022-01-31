@@ -5,7 +5,7 @@ public class Principal {
 		int op = 0;
 
 		while (fim.equalsIgnoreCase("nao")) {
-			op = InteracaoUsu.receberInt("Opcoes:\r\n1: Cadastrar pessoa;\r\n"
+			op = InteracaoUsu.receberInt("\nOpcoes:\r\n1: Cadastrar pessoa;\r\n"
 				+"2: Mostrar cadastros;\r\n"
 				+"3: Atualizar cadastro;\r\n"
 				+"4: Deletar cadastro;\r\n"
