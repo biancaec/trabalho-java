@@ -1,3 +1,3 @@
-# trabalho-java
+# Programa em Java (+praTi/Alfamidia)
 
-# commit 1
+Programa no estilo CRUD escrito após conclusão do curso "Desenvolvimento Java" da escola Alfamídia, através de uma bolsa oferecida pelo projeto +praTi.
