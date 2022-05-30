@@ -1,18 +1,20 @@
+import java.time.LocalDate;
+
 public class Pessoa {
 
 	private String nome;
 	private String telefone;
-	private String dataNascimento;
-	private String dataCadastro;
-	private String ultimaAlteracao;
+	private LocalDate dataNascimento;
+	private LocalDate dataCadastro;
+	private LocalDate ultimaAlteracao;
 
 	public Pessoa() {
 
 		this.nome = "";
 		this.telefone = "";
-		this.dataNascimento = "";
-		this.dataCadastro = "";
-		this.ultimaAlteracao = "";
+		this.dataNascimento = LocalDate.now();
+		this.dataCadastro = LocalDate.now();
+		this.ultimaAlteracao = LocalDate.now();
 	}
 
 	public void setNome(String nome) {
@@ -23,15 +25,15 @@ public class Pessoa {
 		this.telefone = telefone;
 	}
 
-	public void setDataNascimento(String dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
-	public void setDataCadastro(String dataCadastro) {
+	public void setDataCadastro(LocalDate dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}	
 
-	public void setUltimaAlteracao(String ultimaAlteracao) {
+	public void setUltimaAlteracao(LocalDate ultimaAlteracao) {
 		this.ultimaAlteracao = ultimaAlteracao;
 	}
 
@@ -43,15 +45,15 @@ public class Pessoa {
 		return this.telefone;
 	}
 
-	public String getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return this.dataNascimento;
 	}	
 	
-	public String getDataCadastro() {
+	public LocalDate getDataCadastro() {
 		return this.dataCadastro;
 	}
 
-	public String getUltimaAlteracao() {
+	public LocalDate getUltimaAlteracao() {
 		return this.ultimaAlteracao;
 	}	
 }

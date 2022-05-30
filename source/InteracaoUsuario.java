@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class InteracaoUsuario {
 	
 	public static int receberInt(String txt) {
@@ -24,7 +26,7 @@ public class InteracaoUsuario {
 		System.out.println(txt);
 	}
 
-	public static String receberData(String txt) {
+	public static LocalDate receberData(String txt) {
 		boolean ok;
 		int dd;
 		int mm;
@@ -40,7 +42,7 @@ public class InteracaoUsuario {
 			}
 		}while(ok==false);
 		
-		return dd+"/"+mm+"/"+aa;
+		return LocalDate.of(aa,mm,dd);
 	}
 
 	public static String receberTelefone(String txt) {

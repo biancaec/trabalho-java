@@ -8,7 +8,7 @@ public class CadastroDAO {
 
 	public static void cadastrar() {
 		String nome;
-		String dataNascimento;
+		LocalDate dataNascimento;
 		String telefone;
 		String aluno = "nao";
 		nome = InteracaoUsuario.receberString("Nome: ");
@@ -28,8 +28,10 @@ public class CadastroDAO {
 		pes.setNome(nome);
 		pes.setDataNascimento(dataNascimento);
 		pes.setTelefone(telefone);
-		pes.setDataCadastro(LocalDate.now().format(formatter));
-		pes.setUltimaAlteracao(LocalDate.now().format(formatter));
+		//pes.setDataCadastro(LocalDate.now().format(formatter));
+		//pes.setUltimaAlteracao(LocalDate.now().format(formatter));
+		pes.setDataCadastro(LocalDate.now());
+		pes.setUltimaAlteracao(LocalDate.now());
 		cadastros.add(pes);
 	}
 
@@ -87,7 +89,7 @@ public class CadastroDAO {
 								p.setTelefone(nTel);
 								break;
 							case 3:
-								String nData = InteracaoUsuario.receberData("\nNova data de nascimento:");
+								LocalDate nData = InteracaoUsuario.receberData("\nNova data de nascimento:");
 								p.setDataNascimento(nData);
 								break;
 							case 4:
@@ -101,7 +103,7 @@ public class CadastroDAO {
 							default:
 								InteracaoUsuario.mostrarTexto("Opcao invalida.");
 						}
-						p.setUltimaAlteracao(LocalDate.now().format(formatter));	
+						p.setUltimaAlteracao(LocalDate.now());	
 					}
 					break;
 				}
