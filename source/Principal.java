@@ -1,3 +1,6 @@
+import repository.CadastroDAO;
+import util.InteracaoUsuario;
+
 public class Principal {
 	
 	public static void main (String args[]) {
